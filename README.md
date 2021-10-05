@@ -1,8 +1,6 @@
-## FINAPI
+# FINAPI
 
----
-
-## Requisitos
+### Requisitos
 
 - [x] Deve ser possível criar uma conta
 - [x] Deve ser possível buscar o extrato bancário do cliente
@@ -16,7 +14,7 @@
 
 ---
 
-## Regras de negócio
+### Regras de negócio
 
 - [x] Não deve ser possível cadastrar uma conta com um CPF já existente
 - [x] Não deve ser possível fazer depósito em uma conta não existente
@@ -28,25 +26,25 @@
 
 ---
 
-## Rotas
+### Rotas
 
-- Criar conta : [POST]/account
+#### Criar conta : [POST]/account
   - Necessario dados de "name" e "cpf" no body da requisição
-- Editar conta : [PUT]/account
-  - Necessario dados de "name" body da requisição
+#### Editar conta : [PUT]/account
+  - Necessario dado de "name" body da requisição
   - Necessario "cpf" no header da requisição
-- Deletar conta : [DELETE]/account
+#### Deletar conta : [DELETE]/account
   - Necessario "cpf" no header da requisição
-- Exibir conta : [GET]/account
+#### Exibir conta : [GET]/account
   - Necessario "cpf" no header da requisição
-- Deposito : [POST]/deposit
+#### Deposito : [POST]/deposit
   - Necessario "cpf" no header da requisição
-- Saque: [POST]/withdraw
+#### Saque: [POST]/withdraw
  - Necessario "cpf" no header da requisição
-- Saldo: [GET]/balance
+#### Saldo: [GET]/balance
   - Necessario "cpf" no header da requisição
-- Extrato da conta : [GET]/statement
+#### Extrato da conta : [GET]/statement
   - Necessario "cpf" no header da requisição
-- Extrato de um dia especifico : [GET]/statement/date
+#### Extrato de um dia especifico : [GET]/statement/date
   - Necessario do dado de "date" na query da requisição
   - Necessario "cpf" no header da requisição
